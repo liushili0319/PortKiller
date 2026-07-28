@@ -24,11 +24,12 @@ coverage/
 *.key
 *.dmp
 
-# Machine-local Trellis identity and session journal
-.trellis/workspace/
+# Machine-local AI assistant and Trellis metadata
+.agents/skills/
+.codex/
+.trellis/
 
-# Internal planning history and unsupported legacy prototype
-.trellis/tasks/
+# Unsupported legacy prototype
 tools/winforms/
 
 # Editor and operating-system metadata
