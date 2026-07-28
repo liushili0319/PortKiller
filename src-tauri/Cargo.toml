@@ -1,0 +1,31 @@
+[package]
+name = "portkiller"
+version = "0.1.0"
+description = "A compact Windows port inspector and process killer."
+edition = "2021"
+
+[lib]
+name = "portkiller_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+tauri = { version = "=1.8.3", features = [ "window-show", "window-set-focus"] }
+windows-sys = { version = "0.52", features = [
+  "Win32_Foundation",
+  "Win32_NetworkManagement_IpHelper",
+  "Win32_Networking_WinSock",
+  "Win32_Security",
+  "Win32_System_Diagnostics_ToolHelp",
+  "Win32_System_Threading",
+  "Win32_UI_Shell",
+  "Win32_UI_WindowsAndMessaging",
+] }
+
+[build-dependencies]
+tauri-build = { version = "=1.5.6", features = [] }
+
+[features]
+custom-protocol = ["tauri/custom-protocol"]
+
+[dev-dependencies]

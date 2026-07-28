@@ -1,0 +1,54 @@
+{
+  "build": {
+    "beforeBuildCommand": "npm run build",
+    "beforeDevCommand": "npm run dev",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist/web"
+  },
+  "package": {
+    "productName": "PortKiller",
+    "version": "0.1.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "window": {
+        "show": true,
+        "setFocus": true
+      }
+    },
+    "bundle": {
+      "active": true,
+      "category": "DeveloperTool",
+      "copyright": "",
+      "externalBin": [],
+      "icon": [
+        "icons/icon.ico"
+      ],
+      "identifier": "dev.portkiller.app",
+      "longDescription": "A compact Windows port inspector and process killer.",
+      "resources": [],
+      "shortDescription": "Inspect local ports and terminate owning processes.",
+      "targets": "all"
+    },
+    "security": {
+      "csp": "default-src 'self'; connect-src ipc: http://ipc.localhost; img-src 'self' data: asset: http://asset.localhost; style-src 'self'; style-src-attr 'unsafe-inline'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'"
+    },
+    "updater": {
+      "active": false
+    },
+    "windows": [
+      {
+        "center": true,
+        "decorations": true,
+        "height": 760,
+        "minHeight": 640,
+        "minWidth": 980,
+        "resizable": true,
+        "visible": false,
+        "title": "PortKiller",
+        "width": 1180
+      }
+    ]
+  }
+}

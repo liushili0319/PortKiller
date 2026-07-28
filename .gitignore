@@ -1,0 +1,38 @@
+# JavaScript dependencies and logs
+node_modules/
+*.log
+npm-debug.log*
+
+# Generated frontend and desktop build output
+dist/
+src-tauri/target/
+coverage/
+*.tsbuildinfo
+.eslintcache
+
+# Machine-local troubleshooting artifacts
+.tmp_*
+*.reg
+
+# Local credentials and environment overrides
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.pem
+*.key
+*.dmp
+
+# Machine-local Trellis identity and session journal
+.trellis/workspace/
+
+# Internal planning history and unsupported legacy prototype
+.trellis/tasks/
+tools/winforms/
+
+# Editor and operating-system metadata
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
