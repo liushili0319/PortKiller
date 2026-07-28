@@ -1,5 +1,7 @@
 # PortKiller
 
+English | [简体中文](README_zh.md)
+
 PortKiller is a Windows desktop control console for inspecting IPv4 and IPv6
 TCP/UDP endpoints and safely terminating the exact process instance that owns a
 selected endpoint. It combines a React interface with a Rust/Tauri backend that
@@ -10,6 +12,16 @@ reads the Windows IP Helper tables directly.
 > The screenshot uses deterministic Preview sample data. Preview mode supports
 > filtering, selection, refresh, and copy interactions, but hides directory,
 > elevation, and termination commands.
+
+## Download
+
+Download the latest verified Windows build from
+[GitHub Releases](https://github.com/liushili0319/PortKiller/releases/latest).
+Each release provides the raw `PortKiller.exe` and a SHA-256 checksum file.
+Windows may require administrator privileges to inspect or terminate processes
+owned by another user or an elevated service. The current binary is not code
+signed, so Windows SmartScreen may show a warning; verify the published
+checksum before running it.
 
 ## Highlights
 
